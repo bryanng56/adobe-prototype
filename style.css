@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.container{
+    position: relative;
+    z-index: 10;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title{
+    color: #fff;
+    text-align: center;
+    /* width: 100%; */
+}
+/* =================== BUTTONS =================== */
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.buttons__links{
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff8000;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    text-decoration: none;
+}
+.buttons__links:nth-child(3){
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.buttons__links:hover{
+    transition : padding 1s;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* transform : translateY(0); */
+    background-color: #ff8000e2;
+    color: #000000;
+}
+/* =================== BACKGROUND =================== */
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(45deg, rgba(42,21,163,0.9724264705882353) 0%, rgba(196,9,212,0.9808298319327731) 55%, rgba(156,25,52,1) 100%); */
+    overflow: hidden;
+}
+.background__item {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+.background__item:nth-child(0) {
+    left: 83%;
+    width: 188px;
+    height: 188px;
+    bottom: -188px;
+    animation-delay: 1s;
+}
+.background__item:nth-child(1) {
+    left: 67%;
+    width: 188px;
+    height: 188px;
+    bottom: -188px;
+    animation-delay: 1s;
+}
+.background__item:nth-child(2) {
+    left: 45%;
+    width: 197px;
+    height: 197px;
+    bottom: -197px;
+    animation-delay: 1s;
+}
+.background__item:nth-child(3) {
+    left: 64%;
+    width: 126px;
+    height: 126px;
+    bottom: -126px;
+    animation-delay: 10s;
+}
+.background__item:nth-child(4) {
+    left: 85%;
+    width: 143px;
+    height: 143px;
+    bottom: -143px;
+    animation-delay: 20s;
+}
+.background__item:nth-child(5) {
+    left: 38%;
+    width: 129px;
+    height: 129px;
+    bottom: -129px;
+    animation-delay: 2s;
+}
+.background__item:nth-child(6) {
+    left: 39%;
+    width: 131px;
+    height: 131px;
+    bottom: -131px;
+    animation-delay: 30s;
+}
+.background__item:nth-child(7) {
+    left: 42%;
+    width: 132px;
+    height: 132px;
+    bottom: -132px;
+    animation-delay: 5s;
+}
+.background__item:nth-child(8) {
+    left: 45%;
+    width: 108px;
+    height: 108px;
+    bottom: -108px;
+    animation-delay: 6s;
+}
+.background__item:nth-child(9) {
+    left: 74%;
+    width: 114px;
+    height: 114px;
+    bottom: -114px;
+    animation-delay: 1s;
+}
+/* =================== KEYFRAMES =================== */
+@keyframes gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
