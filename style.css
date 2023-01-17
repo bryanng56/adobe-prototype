@@ -26,15 +26,17 @@ body {
 .title{
     color: #fff;
     text-align: center;
-    /* width: 100%; */
 }
 /* =================== BUTTONS =================== */
 .buttons{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    align-items: center;
+    align-content: center;
     justify-content: center;
+    justify-items: center;
+    gap: 20px 5px;
+    text-align: center;
 }
 .buttons__links{
     font-family: Roboto, sans-serif;
@@ -51,16 +53,27 @@ body {
     text-decoration: none;
 }
 .buttons__links:nth-child(3){
-    padding-left: 40px;
-    padding-right: 40px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+.buttons__links:nth-child(4){
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
 }
 .buttons__links:hover{
     transition : padding 1s;
     padding-left: 50px;
     padding-right: 50px;
-    /* transform : translateY(0); */
+    transform : translateY(0);
     background-color: #ff8000e2;
     color: #000000;
+}
+
+@media screen and (min-width: 720px) {
+    .buttons{
+        display: flex;
+        column-gap: 20px;
+    }
 }
 /* =================== BACKGROUND =================== */
 .background {
@@ -71,7 +84,6 @@ body {
     left: 0;
     margin: 0;
     padding: 0;
-    /* background: linear-gradient(45deg, rgba(42,21,163,0.9724264705882353) 0%, rgba(196,9,212,0.9808298319327731) 55%, rgba(156,25,52,1) 100%); */
     overflow: hidden;
 }
 .background__item {
